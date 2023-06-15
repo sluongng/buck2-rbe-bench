@@ -1,0 +1,9 @@
+/buck-out
+/bazel-*
+
+# Files containing API Keys to BuildBuddy
+/user.bazelrc
+/.buckconfig.local
+
+# Generated file during benchmark
+/instance.bzl

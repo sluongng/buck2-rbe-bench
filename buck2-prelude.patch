@@ -1,0 +1,13 @@
+diff --git a/sh_test.bzl b/sh_test.bzl
+index cec8c21..f17bbda 100644
+--- a/sh_test.bzl
++++ b/sh_test.bzl
+@@ -18,7 +18,7 @@ def sh_test_impl(ctx: "context") -> ["provider"]:
+ 
+     if ctx.attrs.test != None:
+         if type(ctx.attrs.test) == "artifact":
+-            args.add(ctx.attrs.test)
++            args.add(cmd_args(["./", ctx.attrs.test], delimiter = ""))
+         elif type(ctx.attrs.test) == "dependency":
+             run_info = ctx.attrs.test.get(RunInfo)
+             if run_info != None:

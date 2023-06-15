@@ -1,0 +1,3 @@
+load(":buck2-platform.bzl", "platforms")
+
+platforms(name = "platforms")
